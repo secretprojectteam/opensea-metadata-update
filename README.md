@@ -10,3 +10,8 @@ This tool allows individuals with an Opensea API Key to update collections metad
 
 ## How it works
 The script queries the blockchain to make sure the token ID exists and then uses the OS API to force update the collection
+
+
+## Usage example
+Chainface HD Upgrade contract, updates tokens 34638 thru 34640
+`node index.js 0x55b3bd7c074ccb74a245d2546273ba690647e8db 34638 34640`
