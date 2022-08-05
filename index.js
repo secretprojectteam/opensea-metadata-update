@@ -13,8 +13,9 @@ if (args.length !== 5) {
     let contract = new web3.eth.Contract(abi, args[2]);
 
     for (let x=parseInt(args[3]); x<=parseInt(args[4]); x++) {
+        console.log(`Querying Token ${x}`);
         if (await exists(contract, x)) {
-            //console.log('exists');
+            console.log(`Processing Token ${x}`);
             try {
                 let r = await axios.get(`https://api.opensea.io/api/v1/asset/${args[2]}/${x}/?force_update=true`, {
                     headers: {
@@ -22,7 +23,7 @@ if (args.length !== 5) {
                     }
                 });
             } catch (e) {
-
+                console.log(`Token ${x} failed to update opensea`);
             }
         }
     }

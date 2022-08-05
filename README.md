@@ -15,3 +15,5 @@ The script queries the blockchain to make sure the token ID exists and then uses
 ## Usage example
 Chainface HD Upgrade contract, updates tokens 34638 thru 34640
 `node index.js 0x55b3bd7c074ccb74a245d2546273ba690647e8db 34638 34640`
+Chainface Undead contract, updates tokens 40000 thru 66969
+`node index.js 0xebb137cec779e1622150e081428e850b64862a4e 40000 66969`
